@@ -1,18 +1,651 @@
-<!doctype html>
-<html>
-  <head>
-    <title>YPogarsky web-page</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4SYQG36PCB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<html class=" js cssanimations" lang="ru-RU"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link href="//fonts.googleapis.com/css?family=Arimo:400,400italic,700,700italic&amp;subset=latin,latin-ext,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800,400italic&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+  <link href="//fonts.googleapis.com/css?family=Roboto+Mono:300,400&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/app/themes/noveo.ru/dist/styles/fontello/css/noveo-icons.css">
 
-  gtag('config', 'G-4SYQG36PCB');
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#eb2f07">
+  <meta name="apple-mobile-web-app-title" content="Noveo Блог">
+  <meta name="application-name" content="Noveo Блог">
+  <meta name="msapplication-TileColor" content="#eb2f07">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#171782">
+  <!-- End Favicon -->
+
+  <!-- RSS  -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed/">
+  <link rel="alternate" type="application/atom+xml" title="Atom" href="/feed/atom/">
+  <!-- End RSS  -->
+  <title>Noveo Блог • Тестовые площадки для тренировок настоящих ниндзя</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v12.9.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Наши тестировщики делятся подборкой площадок, на которых можно потренироваться во всех направлениях — и в знании определений и техник тест-дизайна, и в применении этих техник для нахождения реальных багов.">
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://blog.noveogroup.ru/2020/01/testovye-ploschadki-dlya-trenirovok/">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Noveo Блог • Тестовые площадки для тренировок настоящих ниндзя">
+<meta property="og:description" content="Наши тестировщики делятся подборкой площадок, на которых можно потренироваться во всех направлениях — и в знании определений и техник тест-дизайна, и в применении этих техник для нахождения реальных багов.">
+<meta property="og:url" content="https://blog.noveogroup.ru/2020/01/testovye-ploschadki-dlya-trenirovok/">
+<meta property="og:site_name" content="Noveo Блог">
+<meta property="article:publisher" content="https://www.facebook.com/NoveoGroup">
+<meta property="article:tag" content="automated testing">
+<meta property="article:tag" content="ISTQB">
+<meta property="article:tag" content="learning">
+<meta property="article:tag" content="manual testing">
+<meta property="article:tag" content="noveo">
+<meta property="article:tag" content="noveogroup">
+<meta property="article:tag" content="testing">
+<meta property="article:tag" content="testing tools">
+<meta property="article:tag" content="автоматическое тестирование">
+<meta property="article:tag" content="инструменты тестирования">
+<meta property="article:tag" content="обучение">
+<meta property="article:tag" content="ручное тестирование">
+<meta property="article:tag" content="тестирование">
+<meta property="article:section" content="Советы">
+<meta property="article:published_time" content="2020-01-22T10:22:17+00:00">
+<meta property="article:modified_time" content="2020-06-25T09:50:47+00:00">
+<meta property="og:updated_time" content="2020-06-25T09:50:47+00:00">
+<meta property="fb:app_id" content="604558049694600">
+<meta property="og:image" content="https://blog.noveogroup.ru/app/uploads/2020/01/01.png">
+<meta property="og:image:secure_url" content="https://blog.noveogroup.ru/app/uploads/2020/01/01.png">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1280">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Наши тестировщики делятся подборкой площадок, на которых можно потренироваться во всех направлениях — и в знании определений и техник тест-дизайна, и в применении этих техник для нахождения реальных багов.">
+<meta name="twitter:title" content="Noveo Блог • Тестовые площадки для тренировок настоящих ниндзя">
+<meta name="twitter:site" content="@Noveo_nsk">
+<meta name="twitter:image" content="https://blog.noveogroup.ru/app/uploads/2020/01/01.png">
+<meta name="twitter:creator" content="@Noveo_nsk">
+<script type="text/javascript" async="" src="https://www.google-analytics.com/plugins/ua/linkid.js"></script><script type="text/javascript" async="" src="https://mc.yandex.ru/metrika/watch.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="//www.googletagmanager.com/gtm.js?id=GTM-5M2K4X"></script><script type="application/ld+json" class="yoast-schema-graph yoast-schema-graph--main">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://blog.noveogroup.ru/#website","url":"https://blog.noveogroup.ru/","name":"Noveo \u0411\u043b\u043e\u0433","description":"\u041f\u0440\u043e\u0433\u0440\u0435\u0441\u0441\u0438\u0432\u043d\u0430\u044f \u0438 \u043a\u0432\u0430\u043b\u0438\u0444\u0438\u0446\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u0430\u044f IT\u2011\u043a\u043e\u043c\u043f\u0430\u043d\u0438\u044f","potentialAction":{"@type":"SearchAction","target":"https://blog.noveogroup.ru/search/{search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://blog.noveogroup.ru/2020/01/testovye-ploschadki-dlya-trenirovok/#primaryimage","url":"/app/uploads/2020/01/01.png","width":1920,"height":1280,"caption":"Testing platforms Noveo advices"},{"@type":"WebPage","@id":"https://blog.noveogroup.ru/2020/01/testovye-ploschadki-dlya-trenirovok/#webpage","url":"https://blog.noveogroup.ru/2020/01/testovye-ploschadki-dlya-trenirovok/","inLanguage":"ru-RU","name":"Noveo \u0411\u043b\u043e\u0433 &bull; \u0422\u0435\u0441\u0442\u043e\u0432\u044b\u0435 \u043f\u043b\u043e\u0449\u0430\u0434\u043a\u0438 \u0434\u043b\u044f \u0442\u0440\u0435\u043d\u0438\u0440\u043e\u0432\u043e\u043a \u043d\u0430\u0441\u0442\u043e\u044f\u0449\u0438\u0445 \u043d\u0438\u043d\u0434\u0437\u044f","isPartOf":{"@id":"https://blog.noveogroup.ru/#website"},"primaryImageOfPage":{"@id":"https://blog.noveogroup.ru/2020/01/testovye-ploschadki-dlya-trenirovok/#primaryimage"},"datePublished":"2020-01-22T10:22:17+00:00","dateModified":"2020-06-25T09:50:47+00:00","author":{"@id":"https://blog.noveogroup.ru/#/schema/person/75634489139b861ccf277a3303035dd6"},"description":"\u041d\u0430\u0448\u0438 \u0442\u0435\u0441\u0442\u0438\u0440\u043e\u0432\u0449\u0438\u043a\u0438 \u0434\u0435\u043b\u044f\u0442\u0441\u044f \u043f\u043e\u0434\u0431\u043e\u0440\u043a\u043e\u0439 \u043f\u043b\u043e\u0449\u0430\u0434\u043e\u043a, \u043d\u0430 \u043a\u043e\u0442\u043e\u0440\u044b\u0445 \u043c\u043e\u0436\u043d\u043e \u043f\u043e\u0442\u0440\u0435\u043d\u0438\u0440\u043e\u0432\u0430\u0442\u044c\u0441\u044f \u0432\u043e \u0432\u0441\u0435\u0445 \u043d\u0430\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f\u0445 \u2014 \u0438 \u0432 \u0437\u043d\u0430\u043d\u0438\u0438 \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0435\u043d\u0438\u0439 \u0438 \u0442\u0435\u0445\u043d\u0438\u043a \u0442\u0435\u0441\u0442-\u0434\u0438\u0437\u0430\u0439\u043d\u0430, \u0438 \u0432 \u043f\u0440\u0438\u043c\u0435\u043d\u0435\u043d\u0438\u0438 \u044d\u0442\u0438\u0445 \u0442\u0435\u0445\u043d\u0438\u043a \u0434\u043b\u044f \u043d\u0430\u0445\u043e\u0436\u0434\u0435\u043d\u0438\u044f \u0440\u0435\u0430\u043b\u044c\u043d\u044b\u0445 \u0431\u0430\u0433\u043e\u0432."},{"@type":["Person"],"@id":"https://blog.noveogroup.ru/#/schema/person/75634489139b861ccf277a3303035dd6","name":"gprikhodko","image":{"@type":"ImageObject","@id":"https://blog.noveogroup.ru/#authorlogo","url":"https://secure.gravatar.com/avatar/a28adb0eda7fb25401e7f7c363aa3a02?s=96&r=g","caption":"gprikhodko"},"sameAs":[]}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+
+		<style type="text/css">
+			.mistape-test, .mistape_mistake_inner {color: #eb2f07 !important;}
+			#mistape_dialog h2::before, #mistape_dialog .mistape_action, .mistape-letter-back {background-color: #eb2f07 !important; }
+			#mistape_reported_text:before, #mistape_reported_text:after {border-color: #eb2f07 !important;}
+            .mistape-letter-front .front-left {border-left-color: #eb2f07 !important;}
+            .mistape-letter-front .front-right {border-right-color: #eb2f07 !important;}
+            .mistape-letter-front .front-bottom, .mistape-letter-back > .mistape-letter-back-top, .mistape-letter-top {border-bottom-color: #eb2f07 !important;}
+            .mistape-logo svg {fill: #eb2f07 !important;}
+		</style>
+		<link rel="stylesheet" href="/app/plugins/smooth-scroll-up/css/scrollup.css?ver=4.9.16">
+<link rel="stylesheet" href="/app/plugins/mistape/assets/css/mistape-front.css?ver=1.3.9">
+<link rel="stylesheet" href="/app/themes/noveo.ru/dist/styles/main-a163478b2b.css">
+<script src="/wp/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+<script src="/wp/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5M2K4X');</script>
+<!-- End Google Tag Manager --></head>
+    <body class="post-template-default single single-post postid-6826 single-format-standard testovye-ploschadki-dlya-trenirovok sidebar-primary" data-new-gr-c-s-check-loaded="14.1041.0" data-gr-ext-installed="">
+    <header class="header">
+    <div class="header__inner">
+        <h1 class="header__logo">
+            <a href="https://noveogroup.ru" class="logo-picture" alt="Noveo">Noveo</a>
+        </h1>
+        <ul class="header__menu">
+            <li class="header__item"><a class="header__link" href="https://noveogroup.ru/about" title="О компании">О компании</a></li>
+            <li class="header__item"><a class="header__link" href="https://job.noveogroup.ru" title="Вакансии">Вакансии</a></li>
+            <li class="header__item"><a class="header__link" href="https://university.noveogroup.ru/" title="Noveo University" target="_blank">Noveo University</a></li>
+            <li class="header__item header__item--active"><a class="header__link" href="https://blog.noveogroup.ru" title="Блог">Блог</a></li>
+            <li class="header__item"><a class="header__link" href="https://noveogroup.ru/contact" title="Контакты">Контакты</a></li>
+
+            <div class="header__search">
+                <div class="header__search-wrapper">
+                    <form id="search-form" method="get" role="search" action="https://blog.noveogroup.ru/">
+                        <input id="search" value="" name="s" type="text" class="header__search-input" placeholder="Поиск по статьям">
+                        <button class="header__search-btn js-search-btn">
+                            <span class="header__search-icon"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <ul class="social-icons_header">
+                <ul class="social-icons social-icons--view-1">
+                    <li class="social-icons__item">
+                        <a href="https://vk.com/noveo" class="social-icons__link" target="_blank">
+                            <span class="social-icons__icon">
+                                <svg class="">
+                                    <use xlink:href="#icon-vk"></use>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="social-icons__item">
+                        <a href="https://www.instagram.com/noveogroup" class="social-icons__link" target="_blank">
+                            <span class="social-icons__icon">
+                                <svg class="">
+                                    <use xlink:href="#icon-inst"></use>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="social-icons__item">
+                        <a href="https://t.me/noveo" class="social-icons__link" target="_blank">
+                            <span class="social-icons__icon">
+                                <svg class="">
+                                    <use xlink:href="#icon-telegram"></use>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="social-icons__item">
+                        <a href="https://twitter.com/Noveo_nsk" class="social-icons__link" target="_blank">
+                            <span class="social-icons__icon">
+                                <svg class="">
+                                    <use xlink:href="#icon-twitter"></use>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="social-icons__item">
+                        <a href="https://www.linkedin.com/company/noveo-group" class="social-icons__link" target="_blank">
+                            <span class="social-icons__icon">
+                                <svg class="">
+                                    <use xlink:href="#icon-linked"></use>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="social-icons__item">
+                        <a href="https://www.youtube.com/user/noveonsk" class="social-icons__link" target="_blank">
+                            <span class="social-icons__icon">
+                                <svg class="">
+                                    <use xlink:href="#icon-youtube"></use>
+                                </svg>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </ul>
+        </ul>
+        <button class="header__search-btn js-header-search-btn">
+            <span class="header__search-icon">
+                <svg class="icon-svg">
+                    <use xlink:href="#icon-search"></use>
+                </svg>
+            </span>
+        </button>
+        <button class="header__hamburger"><span class="header__hamburger-icon"></span></button>
+    </div>
+</header>
+        
+    <main class="container blog  container_single" role="main">
+    
+                    <div class="single-post__breadcrumbs breadcrumbs">
+                <a class="breadcrumbs__link" href="https://blog.noveogroup.ru">Наш блог</a>
+                <span class="breadcrumbs__arrow"></span>
+                <span class="breadcrumbs__item">Тестовые площадки для тренировок настоящих ниндзя</span>
+            </div>
+        
+        <div class="content">
+              <article class="single-post">
+    <header class="single-post__header">
+      <h2 class="single-post__title">Тестовые площадки для тренировок настоящих ниндзя</h2>
+      <div class="single-post__inner">
+        <a class="single-post__date" href="/2020/01/testovye-ploschadki-dlya-trenirovok/">22 января 2020 </a>
+        <ul class="social-share social-likes social-likes_birman social-likes_visible" data-counters="no">
+    <li class="social-share__item social-likes__widget social-likes__widget_linkedin" title="Поделиться ссылкой в LinkedIn"><span class="social-likes__button social-likes__button_linkedin"><span class="social-likes__icon social-likes__icon_linkedin"></span>
+        <span class="search__icon">
+            <svg class="icon-svg">
+                <use xlink:href="#icon-linked"></use>
+            </svg>
+        </span>
+    </span></li>
+
+    <li class="social-share__item social-likes__widget social-likes__widget_vkontakte" title="Поделиться ссылкой во Вконтакте"><span class="social-likes__button social-likes__button_vkontakte"><span class="social-likes__icon social-likes__icon_vkontakte"></span>
+        <span class="search__icon">
+            <svg class="icon-svg">
+                <use xlink:href="#icon-vk-shared"></use>
+            </svg>
+        </span>
+    </span></li>
+
+    <li class="social-share__item social-likes__widget social-likes__widget_twitter" title="Поделиться ссылкой в Твиттере"><span class="social-likes__button social-likes__button_twitter"><span class="social-likes__icon social-likes__icon_twitter"></span>
+        <span class="search__icon">
+            <svg class="icon-svg">
+                <use xlink:href="#icon-twitter"></use>
+            </svg>
+        </span>
+    </span></li>
+
+    <li class="social-share__item social-likes__widget social-likes__widget_facebook" title="Поделиться ссылкой на Фейсбуке"><span class="social-likes__button social-likes__button_facebook"><span class="social-likes__icon social-likes__icon_facebook"></span>
+        <span class="search__icon">
+            <svg class="icon-svg">
+                <use xlink:href="#icon-facebook"></use>
+            </svg>
+        </span>
+    </span></li>
+</ul>
+      </div>
+    </header>
+    <div class="post-content post-content_single">
+      <p>Начался новый год, и, как обычно случается, многие дали себе обещания или поставили цели на 2020. Одна из целей, которую мы регулярно ставим и выполняем, — расти, развиваться и прокачивать свои навыки :)</p>
+<p><img class="aligncenter wp-image-6829" src="https://blog.noveogroup.ru/app/uploads/2020/01/01-960x640.png" alt="Testing platforms Noveo advices" width="560" height="373" srcset="/app/uploads/2020/01/01-960x637.png 960w, /app/uploads/2020/01/01-300x200.png 300w, /app/uploads/2020/01/01-768x512.png 768w, /app/uploads/2020/01/01-1024x683.png 1024w, /app/uploads/2020/01/01-458x305.png 458w" sizes="(max-width: 560px) 100vw, 560px"></p>
+<p>Разумеется, всё определяется не одной лишь теорией, но и практическим подкреплением знаний. Поэтому сегодня наши тестировщики делятся подборкой площадок, на которых можно потренироваться во всех направлениях — и в знании определений и техник тест-дизайна, и в применении этих техник для нахождения реальных багов.</p>
+<p><img class="aligncenter wp-image-6830" src="https://blog.noveogroup.ru/app/uploads/2020/01/02-960x640.png" alt="Testing platforms Noveo advices" width="560" height="373" srcset="/app/uploads/2020/01/02-960x637.png 960w, /app/uploads/2020/01/02-300x200.png 300w, /app/uploads/2020/01/02-768x512.png 768w, /app/uploads/2020/01/02-1024x683.png 1024w, /app/uploads/2020/01/02-458x305.png 458w" sizes="(max-width: 560px) 100vw, 560px"></p>
+<h2>Тренажеры для тестирования без применения автоматизации</h2>
+<p>Нацелены исключительно на развитие внимательности, аналитических скиллов и логического мышления. Возможно, протестировать что-то подобное вас попросят на начальном этапе собеседования.</p>
+<p>🔹 <a href="http://testingchallenges.thetestingmap.org" target="_blank" rel="noopener">http://testingchallenges.thetestingmap.org</a> — подборка разного вида полей, в которых надо найти ошибки либо провести определенные проверки. Чтобы выполнить челлендж, необходимо набрать максимум баллов. Для тех, кто любит признание, есть доска почета: после выполнения челленджа вы можете оставить свое имя в специальной формочке, и спустя некоторое время оно появится в списке решивших.</p>
+<p>🔹 <a href="https://playground.learnqa.ru/puzzle/triangle" target="_blank" rel="noopener">https://playground.learnqa.ru/puzzle/triangle</a> — тренировочная площадка, на которой необходимо протестировать простую программу, которая определяет тип треугольника по его сторонам.</p>
+<p>🔹 <a href="http://qainterview.pythonanywhere.com/" target="_blank" rel="noopener">http://qainterview.pythonanywhere.com/</a> — простейшая форма, в которую нужно вводить число, чтобы получить его факториал на выходе. Только вот незадача: в форме спрятались баги, поэтому не поленитесь найти их!</p>
+<p><img class="aligncenter wp-image-6831" src="https://blog.noveogroup.ru/app/uploads/2020/01/03-960x640.png" alt="Testing platforms Noveo advices" width="560" height="373" srcset="/app/uploads/2020/01/03-960x637.png 960w, /app/uploads/2020/01/03-300x200.png 300w, /app/uploads/2020/01/03-768x512.png 768w, /app/uploads/2020/01/03-1024x683.png 1024w, /app/uploads/2020/01/03-458x305.png 458w" sizes="(max-width: 560px) 100vw, 560px"></p>
+<h2>Тренажеры на знание теории тестирования</h2>
+<p>Для тех, кто готовится к сертификации или просто хочет знать больше.</p>
+<p>🔹 <a href="https://skillotron.com/skills/qa-general" target="_blank" rel="noopener">https://skillotron.com/skills/qa-general</a> — подборка тестовых вопросов, ответы на которые подскажет знание теории, практический опыт или просто логика.</p>
+<p>🔹 <a href="http://istqb-training.ru/" target="_blank" rel="noopener">http://istqb-training.ru/</a> — русскоязычный сайт для тренировки подготовки к экзамену ISTQB.</p>
+<p>🔹 <a href="https://www.testingexcellence.com/istqb-quiz/istqb-foundation-practice-exam-1/" target="_blank" rel="noopener">https://www.testingexcellence.com/istqb-quiz/istqb-foundation-practice-exam-1/</a> — тоже ISTQB-тренажер, но уже на английском.</p>
+<p>🔹 <a href="https://www.gasq.org/en/certification/sample-exam.html" target="_blank" rel="noopener">https://www.gasq.org/en/certification/sample-exam.html</a> — официальный тестовый ISTQB-экзамен. Очень рекомендуем тренироваться на нем, если планируете проходить сертификацию :)</p>
+<p>🔹 <a href="http://www.quizful.net/interview/qa" target="_blank" rel="noopener">http://www.quizful.net/interview/qa</a> — подборка вопросов, которые могут быть заданы на собеседовании на тестировщика. Будьте внимательны и не забывайте про критическое мышление: вопросы могут добавлять сами пользователи, значит, не всегда правильный ответ на сайте — истина в последней инстанции лично для вас!</p>
+<p>🔹<a href="https://stepik.org/course/16478" target="_blank" rel="noopener">https://stepik.org/course/16478</a> — курс-теоретический ликбез по тестированию с практическими заданиями, основанный на силлабусе ISTQB.</p>
+<p>🔹<a href="https://www.guru99.com/tests.html" target="_blank" rel="noopener">https://www.guru99.com/tests.html</a> — подборка квизов как на теорию тестирования, так и на знание инструментов (например, Quality center, QTP или JMeter).</p>
+<p><img class="aligncenter wp-image-6832" src="https://blog.noveogroup.ru/app/uploads/2020/01/04-960x640.png" alt="Testing platforms Noveo advices" width="560" height="373" srcset="/app/uploads/2020/01/04-960x637.png 960w, /app/uploads/2020/01/04-300x200.png 300w, /app/uploads/2020/01/04-768x512.png 768w, /app/uploads/2020/01/04-1024x683.png 1024w, /app/uploads/2020/01/04-458x305.png 458w" sizes="(max-width: 560px) 100vw, 560px"></p>
+<h2>Тренажеры для практики тестирования API</h2>
+<p>Разумеется, тестирование не ограничивается лишь клиентской стороной, и в этих «песочницах» вы можете попрактиковаться в отправке запросов к серверу: как исключительно вручную, так и с помощью автоматизации — инструмент выбираете вы сами, а вот API, к которому будете обращаться, и документацию к нему предоставляют следующие ресурсы:</p>
+<p>🔹 <a href="https://reqres.in/" target="_blank" rel="noopener">https://reqres.in/</a></p>
+<p>🔹 <a href="http://httpbin.org/" target="_blank" rel="noopener">http://httpbin.org/</a></p>
+<p>🔹 <a href="http://petstore.swagger.io/" target="_blank" rel="noopener">http://petstore.swagger.io/</a></p>
+<p>Итак, когда вы решили все задачки в тестах выше и хотите больше практики в новой для себя сфере, а проект не позволяет «поднять» автотесты, вы можете пробовать свои силы на демо-сайтах, созданных специально для тестового использования.</p>
+<h2>Сайты-песочницы, на которых можно практиковать написание автотестов</h2>
+<p>🔹 <a href="http://computer-database.gatling.io/" target="_blank" rel="noopener">http://computer-database.gatling.io/</a> — простой сайт-база компьютеров. Подходит еще и для практики нагрузочного тестирования (изначально создавался как раз для демонстрации работы инструмента Gatling, который применяется для load-тестирования).</p>
+<p>🔹<a href="http://demo.guru99.com/" target="_blank" rel="noopener">http://demo.guru99.com/</a> — база с демо-проектами (банковская система, система страхования, система телекома, система оплаты онлайн-заказа и т.д.)</p>
+<p>🔹 <a href="http://automationpractice.com/" target="_blank" rel="noopener">http://automationpractice.com/</a> — сайт, функциональностью немного похожий на LaModa :) Проще говоря, интернет-магазин одежды с доставкой.</p>
+<p>🔹 <a href="http://demowebshop.tricentis.com/" target="_blank" rel="noopener">http://demowebshop.tricentis.com/</a> — песочница в формате онлайн-магазина.</p>
+<p>🔹 Самый интересный, на наш взгляд, вариант: <a href="https://phptravels.com/demo" target="_blank" rel="noopener">https://phptravels.com/demo</a>. Это не просто тестовый сайт — тут ещё и тестовая админка есть!</p>
+<p><strong>Бонус:</strong> сайт W3Schools можно оценить не только за полезные упражнения и возможность практики, но и за раздел <a href="https://www.w3schools.com/howto/" target="_blank" rel="noopener">https://www.w3schools.com/howto/</a>.</p>
+<p>Как использовать его для практики, если вы не разработчик, а тестировщик? Всё просто: достаточно скопировать код готовой формы и сохранить получившуюся веб-страничку, а потом играть с ней как захочется: добавлять ID и <a href="https://blog.noveogroup.ru/2019/12/data-qa-udobnye-selektory-dlya-avtomatizatsi/" target="_blank" rel="noopener">data-атрибуты</a>, автоматизировать заполнение, тренироваться в подборе CSS-селекторов, применяя к формам разные стили, или просто на досуге разбираться в коде, ведь если мы работаем с вебом, никогда не будет лишним знать, что и как работает «под капотом».</p>
+<p>Конечно, если дело доходит до автоматизации, то тут и говорить нечего: нужно не только знать сам инструмент (Selenium, Cypress, Puppeteer или что-то другое), но и хорошо ориентироваться в возможностях языка программирования, выбранного для написания автотестов. Здесь вам на помощь придут они — бесплатные интерактивные площадки с теорией и задачами на разные языки программирования!</p>
+<p>🔹 <a href="https://www.hackerrank.com/" target="_blank" rel="noopener">https://www.hackerrank.com/</a> — платформа с задачками на разные языки. Довольно интересен раздел Interview Preparation Kit, там много вопросов и на теорию, и на практические навыки решения технических задач.</p>
+<p>🔹 <a href="https://hyperskill.org/" target="_blank" rel="noopener">https://hyperskill.org/</a> — интерактивный тренажер, фишка которого — проектное обучение. Вы не просто изучаете абстрактную теорию, а сразу же применяете её для создания итоговой работающей программы (а проектов там много, от имитации кофемашины до игры против искусственного интеллекта).</p>
+<p>🔹 <a href="https://skillotron.com/" target="_blank" rel="noopener">https://skillotron.com/</a> — тут достаточно выбрать необходимую квалификацию, и можно тренировать знание теории того или иного языка.</p>
+<p>🔹 <a href="https://www.codecademy.com/" target="_blank" rel="noopener">https://www.codecademy.com/</a> — довольно известный ресурс. К сожалению, не все курсы бесплатные.</p>
+<p>🔹 <a href="https://sqlzoo.net/" target="_blank" rel="noopener">https://sqlzoo.net/</a> — это тренажер исключительно для SQL-запросов, однако довольно объемный! Если знаете, что на собеседовании будут спрашивать про JOINs, порешать задачки в нем в качестве подготовки будет самое то.</p>
+<p>🔹 <a href="https://stepik.org/catalog?tag=22872" target="_blank" rel="noopener">https://stepik.org/catalog?tag=22872</a> — самые разные курсы по программированию на разных языках, тестированию, алгоритмам. Большая часть бесплатные, а задания можно выполнять прямо на сайте в окошке с code editor.</p>
+<p>🔹<a href="https://www.sololearn.com/" target="_blank" rel="noopener">https://www.sololearn.com/</a> — забавная площадка. Из-за простого формата вопросов и отсутствия задач на написание кода «с нуля» она не дает основательных знаний по теории языков программирования, но поиграть, вспомнить забытые навыки и просто разнообразить процесс обучения геймификацией вполне можно.</p>
+<p>🔹<a href="https://www.codewars.com/" target="_blank" rel="noopener">https://www.codewars.com/</a> — тренажер, похожий на Hackerrank. Одна из ключевых фишек — так называемые «дуэли», когда можно вызвать на решение задачи соперника и посоревноваться, кто быстрее справится :)</p>
+<p>🔹<a href="https://www.w3schools.com/" target="_blank" rel="noopener">https://www.w3schools.com/</a> — наш фаворит :) Много туториалов, упражнений и практических заданий.</p>
+<p>🔹<a href="https://www.katacoda.com/learn" target="_blank" rel="noopener">https://www.katacoda.com/learn</a> — платформа про DevOps-практики, такие как контейнеры, CI, Bash, облачные технологии. На некоторых проектах такие знания тестировщикам могут оказаться нужнее, чем языки программирования, так что настоятельно рекомендуем обратить внимание.</p>
+<p>Разумеется, этот список можно и нужно дополнять. Помните, что какие бы тренажеры вы ни выбрали, главное — ваше усердие и желание узнать что-то новенькое. Надеемся, что эта подборка подкрепит ваш интерес к тестированию и поможет получить новые знания и умения в 2020 году :)</p>
+<p><img class="aligncenter wp-image-6833" src="https://blog.noveogroup.ru/app/uploads/2020/01/05-960x640.png" alt="Testing platforms Noveo advices" width="560" height="373" srcset="/app/uploads/2020/01/05-960x637.png 960w, /app/uploads/2020/01/05-300x200.png 300w, /app/uploads/2020/01/05-768x512.png 768w, /app/uploads/2020/01/05-1024x683.png 1024w, /app/uploads/2020/01/05-458x305.png 458w" sizes="(max-width: 560px) 100vw, 560px"></p>
+<div class="mistape_caption"><span class="mistape-link-wrap"><a href="https://mistape.com" target="_blank" rel="nofollow" class="mistape-link mistape-logo"></a></span><p></p>
+<p>Если вы нашли ошибку, пожалуйста, выделите фрагмент текста и нажмите <em>Ctrl+Enter</em>.</p>
+</div>
+    </div>
+    <div class="post-list-unit__tags-group">
+      <ul class="post-list-unit__tags"><li><a href="/tag/automated-testing/" rel="tag">automated testing</a></li><li><a href="/tag/istqb/" rel="tag">ISTQB</a></li><li><a href="/tag/learning/" rel="tag">learning</a></li><li><a href="/tag/manual-testing/" rel="tag">manual testing</a></li><li><a href="/tag/noveo/" rel="tag">noveo</a></li><li><a href="/tag/noveogroup/" rel="tag">noveogroup</a></li><li><a href="/tag/testing/" rel="tag">testing</a></li><li><a href="/tag/testing-tools/" rel="tag">testing tools</a></li><li><a href="/tag/avtomaticheskoe-testirovanie/" rel="tag">автоматическое тестирование</a></li><li><a href="/tag/instrumenty-testirovaniya/" rel="tag">инструменты тестирования</a></li><li><a href="/tag/obuchenie/" rel="tag">обучение</a></li><li><a href="/tag/ruchnoe-testirovanie/" rel="tag">ручное тестирование</a></li><li><a href="/tag/testirovanie/" rel="tag">тестирование</a></li></ul>    </div>
+
+    <div class="navigation-post">
+              <a class="navigation-post__item" href="https://blog.noveogroup.ru/2020/01/ux-analitika-bez-granits/"><span class="navigation-post__item--mobile">Назад</span><span class="navigation-post__item--desktop">Предыдущий пост</span></a>
+              <ul class="social-share social-likes social-likes_birman social-likes_visible" data-counters="no">
+    <li class="social-share__item social-likes__widget social-likes__widget_linkedin" title="Поделиться ссылкой в LinkedIn"><span class="social-likes__button social-likes__button_linkedin"><span class="social-likes__icon social-likes__icon_linkedin"></span>
+        <span class="search__icon">
+            <svg class="icon-svg">
+                <use xlink:href="#icon-linked"></use>
+            </svg>
+        </span>
+    </span></li>
+
+    <li class="social-share__item social-likes__widget social-likes__widget_vkontakte" title="Поделиться ссылкой во Вконтакте"><span class="social-likes__button social-likes__button_vkontakte"><span class="social-likes__icon social-likes__icon_vkontakte"></span>
+        <span class="search__icon">
+            <svg class="icon-svg">
+                <use xlink:href="#icon-vk-shared"></use>
+            </svg>
+        </span>
+    </span></li>
+
+    <li class="social-share__item social-likes__widget social-likes__widget_twitter" title="Поделиться ссылкой в Твиттере"><span class="social-likes__button social-likes__button_twitter"><span class="social-likes__icon social-likes__icon_twitter"></span>
+        <span class="search__icon">
+            <svg class="icon-svg">
+                <use xlink:href="#icon-twitter"></use>
+            </svg>
+        </span>
+    </span></li>
+
+    <li class="social-share__item social-likes__widget social-likes__widget_facebook" title="Поделиться ссылкой на Фейсбуке"><span class="social-likes__button social-likes__button_facebook"><span class="social-likes__icon social-likes__icon_facebook"></span>
+        <span class="search__icon">
+            <svg class="icon-svg">
+                <use xlink:href="#icon-facebook"></use>
+            </svg>
+        </span>
+    </span></li>
+</ul>
+              <a class="navigation-post__item" href="https://blog.noveogroup.ru/2020/01/krasivo-zhit-ne-zapretish/"><span class="navigation-post__item--mobile">Вперед</span><span class="navigation-post__item--desktop">Следующий пост</span></a>
+              </div>
+    
+  </article>
+        </div>
+
+                    <div class="blog__controls">
+                <div class="blog__pagination">
+                                    </div>
+
+                <div class="blog__archive">
+                    <div class="blog__archive-dropdown">
+                        <span class="blog__archive-title">Архив</span>
+                        <ul class="archive-wrapper">
+                            	<li><a href="/2021/">2021</a></li>
+	<li><a href="/2020/">2020</a></li>
+	<li><a href="/2019/">2019</a></li>
+	<li><a href="/2018/">2018</a></li>
+	<li><a href="/2017/">2017</a></li>
+	<li><a href="/2016/">2016</a></li>
+	<li><a href="/2015/">2015</a></li>
+	<li><a href="/2014/">2014</a></li>
+	<li><a href="/2013/">2013</a></li>
+	<li><a href="/2012/">2012</a></li>
+	<li><a href="/2011/">2011</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+    </main>
+    <div class="related-posts">
+  <div class="related-posts__inner">
+    <h2 class="related-posts__title">Еще на эту тему</h2>
+    <div class="related-posts__units">
+    <article class="post-list-unit">
+  <a href="/2021/11/avtomatizatsiya-qa-kogda-i-zachem/" class="post-list-unit__content">
+    <div class="post-list-unit__img" style="background-image: url(/app/uploads/2021/11/Artboard-1-100-380x278.jpg) "></div>
+    <div class="post-list-unit__wrapper">
+      <div class="post-list-unit__header">
+        <h5 class="post-list-unit__title">Автоматизация QA: когда и зачем</h5> 
+        <span class="post-list-unit__date">24 ноября 2021 </span>
+      </div>
+      <div class="post-list-unit__paragraph">
+        <p class="post-list-unit__text">Когда и зачем нужно автоматическое тестирование и что это вообще такое? Senior Test Engineer Noveo Елена раскладывает все по полочкам:</p>
+        <span class="post-list-unit__link">Читать</span>
+      </div>
+    </div>
+  </a>
+</article>
+<article class="post-list-unit">
+  <a href="/2021/10/letnyaya-stazhirovka-noveo-2021/" class="post-list-unit__content">
+    <div class="post-list-unit__img" style="background-image: url(/app/uploads/2021/10/00-1-380x278.jpg) "></div>
+    <div class="post-list-unit__wrapper">
+      <div class="post-list-unit__header">
+        <h5 class="post-list-unit__title">Learn. Check. Repeat: летняя стажировка Noveo 2021</h5> 
+        <span class="post-list-unit__date">13 октября 2021 </span>
+      </div>
+      <div class="post-list-unit__paragraph">
+        <p class="post-list-unit__text">Завершилась летняя стажировка Noveo Software University. В этот раз мы решили миксануть форматы онлайн и офлайн, и получилось здорово!</p>
+        <span class="post-list-unit__link">Читать</span>
+      </div>
+    </div>
+  </a>
+</article>
+<article class="post-list-unit">
+  <a href="/2021/08/yazykovye-budni-noveo/" class="post-list-unit__content">
+    <div class="post-list-unit__img" style="background-image: url(/app/uploads/2021/08/photo_2021-08-27_15-06-41-380x278.jpg) "></div>
+    <div class="post-list-unit__wrapper">
+      <div class="post-list-unit__header">
+        <h5 class="post-list-unit__title">С нами не соскучишься: языковые будни Noveo</h5> 
+        <span class="post-list-unit__date">27 августа 2021 </span>
+      </div>
+      <div class="post-list-unit__paragraph">
+        <p class="post-list-unit__text">Квиз, песенный марафон, разговорный клуб… А вы как учите английский в компании? :)</p>
+        <span class="post-list-unit__link">Читать</span>
+      </div>
+    </div>
+  </a>
+</article>
+    </div>
+  </div>
+</div>
+
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <div class="footer__logo">
+              <a href="/"><img class="logo" src="https://blog.noveogroup.ru/app/themes/noveo.ru/dist/images/footer-logo.svg" alt="Noveo"></a>
+            </div>
+
+            <div class="footer__column">
+                <h3 class="footer__title">Адреса</h3>
+
+                <input class="footer__input" type="checkbox" id="address-toggle">
+                <label class="footer__label" for="address-toggle">Адреса</label>
+
+                <div class="footer__toggle" id="footer-address">
+                    <div class="footer__item">
+                        <span class="footer__item-top">ул. Крылова, д. 31, 2 этаж</span>
+                        <span class="footer__item-bottom">Новосибирск</span>
+                    </div>
+                    <div class="footer__item">
+                        <span class="footer__item-top">ул. Разъездная, д. 12, 5 этаж</span>
+                        <span class="footer__item-bottom">Академгородок</span>
+                    </div>
+                    <div class="footer__item">
+                        <span class="footer__item-top">Финляндский проспект, д. 4, лит. А</span>
+                        <span class="footer__item-bottom">Санкт-Петербург</span>
+                    </div>
+                    <div class="footer__item">
+                        <span class="footer__item-top">Riga Feraiou, 4-4h Omega Business Center</span>
+                        <span class="footer__item-bottom">Limassol</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__column">
+                <h3 class="footer__title">Трудоустройство</h3>
+
+                <input class="footer__input" type="checkbox" id="employment-toggle">
+                <label class="footer__label" for="employment-toggle">Трудоустройство</label>
+
+                <div class="footer__toggle" id="footer-employment">
+                    <div class="footer__item">
+                        <span class="footer__item-top">jobs@noveogroup.com</span>
+                        <span class="footer__item-bottom">Общая почта</span>
+                    </div>
+                    <div class="footer__item">
+                        <span class="footer__item-top">+7 (383) 319-56-65</span>
+                        <span class="footer__item-bottom">Новосибирск</span>
+                    </div>
+                    <div class="footer__item">
+                        <span class="footer__item-top">+7 (921) 995-56-99</span>
+                        <span class="footer__item-bottom">Санкт-Петербург</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__social">
+                <h3 class="footer__title footer__title--social">Соцсети</h3>
+                <ul class="social-icons">
+                    <li class="social-icons__item">
+                        <a href="https://vk.com/noveo" class="social-icons__link" target="_blank">
+                            <span class="social-icons__icon">
+                                <svg class="">
+                                    <use xlink:href="#icon-vk"></use>
+                                </svg>
+                            </span>
+                            <span class="social-icons__text">Vkontakte</span>
+                        </a>
+                    </li>
+                    <li class="social-icons__item">
+                        <a href="https://www.instagram.com/noveogroup" class="social-icons__link" target="_blank">
+                            <span class="social-icons__icon">
+                                <svg class="">
+                                    <use xlink:href="#icon-inst"></use>
+                                </svg>
+                            </span>
+                            <span class="social-icons__text">Instagram</span>
+                        </a>
+                    </li>
+                    <li class="social-icons__item">
+                        <a href="https://t.me/noveo" class="social-icons__link" target="_blank">
+                            <span class="social-icons__icon">
+                                <svg class="">
+                                    <use xlink:href="#icon-telegram"></use>
+                                </svg>
+                            </span>
+                            <span class="social-icons__text">Telegram</span>
+                        </a>
+                    </li>
+                    <li class="social-icons__item">
+                        <a href="https://twitter.com/Noveo_nsk" class="social-icons__link" target="_blank">
+                            <span class="social-icons__icon">
+                                <svg class="">
+                                    <use xlink:href="#icon-twitter"></use>
+                                </svg>
+                            </span>
+                            <span class="social-icons__text">Twitter</span>
+                        </a>
+                    </li>
+                    <li class="social-icons__item">
+                        <a href="https://www.linkedin.com/company/noveo-group" class="social-icons__link" target="_blank">
+                            <span class="social-icons__icon">
+                                <svg class="">
+                                    <use xlink:href="#icon-linked"></use>
+                                </svg>
+                            </span>
+                            <span class="social-icons__text">LinkedIn</span>
+                        </a>
+                    </li>
+                    <li class="social-icons__item">
+                        <a href="https://www.youtube.com/user/noveonsk" class="social-icons__link" target="_blank">
+                            <span class="social-icons__icon">
+                                <svg class="">
+                                    <use xlink:href="#icon-youtube"></use>
+                                </svg>
+                            </span>
+                            <span class="social-icons__text">Youtube</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <p class="footer__copyrights">
+            © 2020 Noveo. Все права защищены. <br>
+            Фото взято на <a class="footer__link" href="https://www.freepik.com/" title="www.freepik.com" target="_blank">www.freepik.com</a>
+        </p>
+    </div>
+</footer>
+<script src="/app/plugins/smooth-scroll-up/js/jquery.scrollUp.min.js?ver=4.9.16"></script>
+<script src="/app/plugins/mistape/assets/js/modernizr.custom.js?ver=1.3.9"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var decoMistape = {"ajaxurl":"https:\/\/blog.noveogroup.ru\/wp\/wp-admin\/admin-ajax.php"};
+/* ]]> */
 </script>
-  </head>
-  <body>
-    <p>Сейчас сейчас... Проверим эту вашу <strong>Гуугл-аналитикуу</strong> </p>
-  </body>
-</html>
+<script src="/app/plugins/mistape/assets/js/mistape-front.js?ver=1607589218"></script>
+<script src="/app/themes/noveo.ru/dist/scripts/main-5ccfdbc670.js"></script>
+<script> var $nocnflct = jQuery.noConflict();
+			$nocnflct(function () {
+			    $nocnflct.scrollUp({
+				scrollName: 'scrollUp', // Element ID
+				scrollClass: 'scrollUp scrollup-link scrollup-left', // Element Class
+				scrollDistance: 300, // Distance from top/bottom before showing element (px)
+				scrollFrom: 'top', // top or bottom
+				scrollSpeed: 300, // Speed back to top (ms )
+				easingType: 'linear', // Scroll to top easing (see http://easings.net/)
+				animation: 'none', // Fade, slide, none
+				animationInSpeed: 200, // Animation in speed (ms )
+				animationOutSpeed: 200, // Animation out speed (ms )
+				scrollText: 'Вверх', // Text for element, can contain HTML
+				scrollTitle: false, // Set a custom link title if required. Defaults to scrollText
+				scrollImg: false, // Set true to use image
+				activeOverlay: false, // Set CSS color to display scrollUp active point
+				zIndex: 2147483647 // Z-Index for the overlay
+			    });
+			});</script><!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5M2K4X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager --><div id="mistape_dialog" data-mode="confirm" data-dry-run="0">
+			           <div class="dialog__overlay"></div><div class="dialog__content without-comment"><div id="mistape_confirm_dialog" class="mistape_dialog_screen">
+					<div class="dialog-wrap">
+						<div class="dialog-wrap-top">
+							<h2>Сообщить об опечатке</h2>
+							 <div class="mistape_dialog_block">
+								<h3>Текст, который будет отправлен нашим редакторам:</h3>
+								<div id="mistape_reported_text"></div>
+							 </div>
+							 </div>
+						<div class="dialog-wrap-bottom"><div class="pos-relative">
+						</div>
+					</div>
+			    </div>
+			    <div class="mistape_dialog_block">
+					<a class="mistape_action" data-action="send" data-id="6826" role="button">Отправить</a>
+					<a class="mistape_action" data-dialog-close="" role="button" style="display:none">Отмена</a>
+				</div>
+				<div class="mistape-letter-front letter-part">
+				    <div class="front-left"></div>
+				    <div class="front-right"></div>
+				    <div class="front-bottom"></div>
+				</div>
+				<div class="mistape-letter-back letter-part">
+					<div class="mistape-letter-back-top"></div>
+				</div>
+				<div class="mistape-letter-top letter-part"></div>
+			</div></div></div><div style="display: none;">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet">
+        <symbol viewBox="0 0 22 14" id="icon-vk" preserveAspectRatio="xMidYMid meet">
+            <path preserveAspectRatio="xMidYMid meet" d="M20.8886 10.8373C20.8632 10.7824 20.8395 10.7369 20.8175 10.7004C20.4531 10.0432 19.7569 9.23651 18.7291 8.28012L18.7074 8.25822L18.6965 8.24748L18.6855 8.23647H18.6745C18.2081 7.79113 17.9127 7.49169 17.789 7.33838C17.5627 7.04634 17.5119 6.75074 17.6356 6.45122C17.723 6.22492 18.0513 5.74701 18.6197 5.01684C18.9187 4.62987 19.1555 4.31973 19.3303 4.08607C20.5914 2.40687 21.1382 1.33383 20.9705 0.86655L20.9053 0.757352C20.8616 0.691611 20.7486 0.63147 20.5666 0.576621C20.3841 0.521888 20.1509 0.512836 19.8666 0.549312L16.7177 0.571098C16.6667 0.552994 16.5939 0.554682 16.499 0.576621C16.4042 0.598561 16.3568 0.609569 16.3568 0.609569L16.302 0.636993L16.2585 0.66994C16.222 0.691726 16.1819 0.730043 16.1382 0.784815C16.0946 0.839395 16.0582 0.903448 16.0291 0.976439C15.6863 1.8598 15.2965 2.68111 14.859 3.44032C14.5893 3.89303 14.3416 4.28536 14.1154 4.61756C13.8895 4.94964 13.7 5.19431 13.547 5.35115C13.3938 5.50813 13.2556 5.6339 13.1314 5.72891C13.0075 5.82395 12.9128 5.86411 12.8473 5.84942C12.7816 5.83473 12.7198 5.82016 12.6612 5.80558C12.5592 5.73984 12.4772 5.65043 12.4154 5.53728C12.3532 5.42414 12.3114 5.28172 12.2896 5.11016C12.2678 4.93848 12.2549 4.79081 12.2513 4.66665C12.2478 4.54265 12.2494 4.36725 12.2568 4.14095C12.2644 3.91454 12.2678 3.76135 12.2678 3.68103C12.2678 3.40357 12.2732 3.10244 12.284 2.77757C12.2951 2.4527 12.304 2.1953 12.3115 2.00567C12.3189 1.81585 12.3223 1.61502 12.3223 1.4033C12.3223 1.19157 12.3095 1.02553 12.284 0.905021C12.2589 0.784661 12.2204 0.667831 12.1695 0.554567C12.1184 0.441418 12.0436 0.353891 11.9454 0.291755C11.847 0.229696 11.7247 0.180448 11.5791 0.143857C11.1928 0.0562914 10.7008 0.00892239 10.1029 0.00155814C8.7472 -0.0130169 7.87608 0.0746636 7.48975 0.264485C7.33668 0.344686 7.19817 0.454267 7.07432 0.592884C6.94308 0.753555 6.92477 0.841236 7.01952 0.855657C7.45693 0.921283 7.76659 1.07827 7.94885 1.32647L8.01452 1.45799C8.06561 1.55288 8.11662 1.72088 8.16767 1.96175C8.21864 2.20262 8.25154 2.46908 8.26601 2.76096C8.3024 3.29399 8.3024 3.75027 8.26601 4.12983C8.22952 4.50955 8.19505 4.80516 8.16216 5.01688C8.12926 5.2286 8.08009 5.40016 8.01452 5.53153C7.94885 5.66294 7.90515 5.74325 7.88325 5.7724C7.86138 5.80155 7.84315 5.81993 7.82867 5.82714C7.73393 5.8635 7.63539 5.88202 7.53341 5.88202C7.43128 5.88202 7.30743 5.83086 7.16167 5.7286C7.01595 5.62635 6.86472 5.48589 6.70798 5.307C6.55123 5.12807 6.37446 4.87803 6.17758 4.55684C5.98085 4.23565 5.77673 3.85605 5.56534 3.41803L5.39044 3.10037C5.2811 2.89601 5.13175 2.59845 4.94222 2.20796C4.75258 1.8173 4.58496 1.43943 4.43924 1.0744C4.38099 0.921092 4.29349 0.804376 4.17688 0.72406L4.12215 0.691112C4.08577 0.661962 4.02737 0.631009 3.94725 0.598024C3.86702 0.565076 3.78331 0.541449 3.69576 0.526913L0.699899 0.548699C0.39376 0.548699 0.186042 0.61816 0.0766687 0.756892L0.0328963 0.822518C0.0110293 0.859071 0 0.917448 0 0.997802C0 1.07812 0.0218671 1.17669 0.0656395 1.29341C0.502981 2.32287 0.978579 3.3157 1.49244 4.27205C2.00629 5.22841 2.45282 5.99878 2.83176 6.58247C3.21078 7.16659 3.59711 7.71787 3.99076 8.23605C4.3844 8.75442 4.64497 9.08662 4.77246 9.23256C4.9001 9.37877 5.00036 9.48809 5.07323 9.56108L5.34663 9.82385C5.52156 9.9991 5.77845 10.209 6.11741 10.4535C6.45645 10.6982 6.83179 10.939 7.24362 11.1765C7.65554 11.4136 8.13474 11.607 8.68149 11.7567C9.22816 11.9064 9.76025 11.9665 10.2778 11.9375H11.5352C11.7902 11.9155 11.9835 11.8352 12.1148 11.6966L12.1583 11.6417C12.1875 11.5981 12.2149 11.5304 12.2402 11.4393C12.2658 11.3481 12.2785 11.2475 12.2785 11.1382C12.271 10.8243 12.2949 10.5414 12.3494 10.2896C12.4039 10.0378 12.466 9.84802 12.5355 9.72018C12.6049 9.59245 12.6833 9.48467 12.7705 9.3973C12.8579 9.30974 12.9201 9.25669 12.9567 9.23843C12.993 9.22006 13.022 9.20759 13.0438 9.20012C13.2188 9.14174 13.4246 9.19827 13.6618 9.36999C13.8987 9.54155 14.1209 9.75339 14.3288 10.0052C14.5366 10.2572 14.7862 10.5399 15.0777 10.8537C15.3694 11.1677 15.6245 11.4011 15.843 11.5546L16.0616 11.686C16.2076 11.7737 16.3972 11.854 16.6304 11.927C16.8633 12 17.0674 12.0182 17.2426 11.9818L20.0415 11.938C20.3184 11.938 20.5338 11.8921 20.6866 11.801C20.8397 11.7098 20.9306 11.6093 20.96 11.4999C20.9892 11.3904 20.9908 11.2662 20.9655 11.1274C20.9396 10.9889 20.9141 10.8921 20.8886 10.8373Z"></path>
+        </symbol>
+        <symbol viewBox="0 0 14 6" id="icon-vk-shared" preserveAspectRatio="xMidYMid meet">
+            <path d="M13.1422 6.73095C13.1262 6.69686 13.1113 6.66858 13.0974 6.64592C12.8682 6.23773 12.4301 5.7367 11.7835 5.1427L11.7699 5.1291L11.763 5.12243L11.7561 5.11559H11.7492C11.4557 4.83899 11.2699 4.65301 11.192 4.55779C11.0496 4.37641 11.0177 4.19281 11.0956 4.00679C11.1505 3.86623 11.3571 3.56941 11.7147 3.11591C11.9028 2.87557 12.0518 2.68294 12.1618 2.53781C12.9552 1.49488 13.2992 0.828431 13.1937 0.538205L13.1527 0.470384C13.1252 0.429552 13.0541 0.392199 12.9396 0.358134C12.8248 0.324139 12.6781 0.318517 12.4992 0.341172L10.5181 0.354703C10.486 0.343459 10.4401 0.344507 10.3804 0.358134C10.3208 0.37176 10.291 0.378597 10.291 0.378597L10.2565 0.39563L10.2291 0.416093C10.2062 0.429624 10.181 0.453422 10.1534 0.48744C10.126 0.521339 10.1031 0.561122 10.0848 0.606456C9.8691 1.1551 9.62387 1.66521 9.34864 2.13674C9.17895 2.41792 9.02311 2.66159 8.88078 2.86792C8.73865 3.07417 8.61941 3.22613 8.52318 3.32354C8.4268 3.42105 8.33982 3.49916 8.26171 3.55817C8.18371 3.6172 8.12418 3.64214 8.08295 3.63302C8.04163 3.62389 8.00272 3.61484 7.96588 3.60579C7.90171 3.56496 7.8501 3.50943 7.81119 3.43915C7.77211 3.36888 7.7458 3.28042 7.73204 3.17387C7.71836 3.06724 7.71026 2.97552 7.70795 2.89841C7.7058 2.82139 7.70679 2.71246 7.71144 2.5719C7.71621 2.43128 7.71836 2.33614 7.71836 2.28625C7.71836 2.11392 7.72175 1.9269 7.72857 1.72512C7.73551 1.52335 7.74113 1.36348 7.74582 1.2457C7.7505 1.1278 7.75267 1.00307 7.75267 0.871573C7.75267 0.740074 7.74457 0.636948 7.72857 0.562099C7.71277 0.487345 7.6885 0.414783 7.65653 0.344436C7.62437 0.27416 7.57729 0.219798 7.51551 0.181206C7.45361 0.142662 7.37665 0.112074 7.28507 0.089348C7.04199 0.034962 6.73245 0.0055416 6.35631 0.000967746C5.50335 -0.00808468 4.95528 0.0463728 4.71222 0.164269C4.61592 0.214081 4.52877 0.282141 4.45085 0.368234C4.36828 0.468025 4.35676 0.522483 4.41637 0.53144C4.69157 0.5722 4.8864 0.669704 5.00106 0.823857L5.04238 0.905543C5.07453 0.964479 5.10662 1.06882 5.13874 1.21842C5.17081 1.36803 5.1915 1.53352 5.20061 1.71481C5.2235 2.04586 5.2235 2.32925 5.20061 2.565C5.17765 2.80084 5.15596 2.98443 5.13527 3.11593C5.11457 3.24743 5.08363 3.35399 5.04238 3.43558C5.00106 3.51719 4.97357 3.56708 4.95979 3.58518C4.94603 3.60329 4.93456 3.6147 4.92545 3.61917C4.86585 3.64176 4.80385 3.65326 4.73969 3.65326C4.67543 3.65326 4.59751 3.62149 4.50581 3.55798C4.41413 3.49447 4.31898 3.40723 4.22036 3.29612C4.12175 3.18499 4.01053 3.02969 3.88666 2.83021C3.76289 2.63072 3.63446 2.39495 3.50146 2.1229L3.39143 1.92561C3.32264 1.79868 3.22867 1.61387 3.10943 1.37134C2.99011 1.12871 2.88465 0.894013 2.79297 0.667298C2.75633 0.57208 2.70127 0.49959 2.62791 0.449706L2.59347 0.429243C2.57059 0.411138 2.53384 0.391913 2.48344 0.371426C2.43296 0.350963 2.38029 0.336289 2.32521 0.32726L0.440345 0.340791C0.247736 0.340791 0.11705 0.383933 0.0482366 0.470098L0.0206969 0.510858C0.00693913 0.53356 0 0.569817 0 0.619725C0 0.669608 0.0137578 0.730832 0.0412974 0.803322C0.316453 1.44271 0.615679 2.05935 0.938975 2.65333C1.26227 3.24731 1.54321 3.72578 1.78162 4.0883C2.02008 4.45109 2.26314 4.79349 2.51081 5.11533C2.75847 5.43728 2.92241 5.64361 3.00262 5.73425C3.08292 5.82506 3.146 5.89295 3.19185 5.93829L3.36386 6.10149C3.47392 6.21034 3.63555 6.34069 3.84881 6.49256C4.06211 6.64452 4.29826 6.79412 4.55737 6.94161C4.81653 7.08885 5.11802 7.20901 5.46201 7.30194C5.80595 7.39496 6.14072 7.43229 6.46635 7.41428H7.25746C7.4179 7.40059 7.53946 7.3507 7.62208 7.26461L7.64945 7.23052C7.66786 7.20346 7.68508 7.16141 7.70098 7.10483C7.71708 7.04816 7.72508 6.98572 7.72508 6.91781C7.72038 6.72287 7.73539 6.54718 7.7697 6.39077C7.80399 6.2344 7.84307 6.1165 7.88678 6.0371C7.93046 5.95777 7.97975 5.89083 8.03462 5.83657C8.0896 5.78218 8.12878 5.74923 8.15176 5.73789C8.1746 5.72648 8.19284 5.71874 8.2066 5.7141C8.31666 5.67784 8.44619 5.71295 8.59539 5.8196C8.74446 5.92616 8.88428 6.05773 9.01506 6.2141C9.14577 6.37061 9.30281 6.54621 9.48622 6.74114C9.66975 6.93615 9.83021 7.08111 9.96774 7.17647L10.1053 7.25808C10.1971 7.31254 10.3164 7.36242 10.4631 7.40776C10.6097 7.45307 10.738 7.46441 10.8483 7.44175L12.6092 7.41459C12.7834 7.41459 12.9189 7.38608 13.0151 7.3295C13.1114 7.27283 13.1686 7.21039 13.1871 7.14247C13.2055 7.07449 13.2065 6.99735 13.1906 6.91111C13.1743 6.82509 13.1582 6.76494 13.1422 6.73095Z"></path>
+        </symbol>
+        <symbol viewBox="0 0 18 16" id="icon-inst">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 4C0 1.79086 1.79086 0 4 0H12C14.2091 0 16 1.79086 16 4V12C16 14.2091 14.2091 16 12 16H4C1.79086 16 0 14.2091 0 12V4ZM8 10.6667C9.47276 10.6667 10.6667 9.47276 10.6667 8C10.6667 6.52724 9.47276 5.33333 8 5.33333C6.52724 5.33333 5.33333 6.52724 5.33333 8C5.33333 9.47276 6.52724 10.6667 8 10.6667ZM13.3333 4C13.3333 4.73638 12.7364 5.33333 12 5.33333C11.2636 5.33333 10.6667 4.73638 10.6667 4C10.6667 3.26362 11.2636 2.66667 12 2.66667C12.7364 2.66667 13.3333 3.26362 13.3333 4Z"></path>
+        </symbol>
+        <symbol viewBox="0 0 22 20" id="icon-telegram">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.852 17.8013C17.1471 18.0065 17.5275 18.0578 17.8667 17.9318C18.2059 17.8049 18.4552 17.5205 18.5304 17.1758C19.3269 13.5001 21.2592 4.19684 21.9843 0.853334C22.0393 0.601334 21.9476 0.339434 21.746 0.171134C21.5443 0.00283346 21.2647 -0.0457667 21.0154 0.0451334C17.1719 1.44194 5.33524 5.80244 0.497187 7.56014C0.19011 7.67174 -0.00971841 7.96154 0.000364691 8.27924C0.0113644 8.59784 0.229526 8.87414 0.543936 8.96684C2.71364 9.60404 5.56165 10.4905 5.56165 10.4905C5.56165 10.4905 6.89262 14.4371 7.58653 16.4441C7.67361 16.6961 7.87435 16.8941 8.13926 16.9625C8.40326 17.03 8.68558 16.9589 8.88266 16.7762C9.9973 15.743 11.7206 14.1454 11.7206 14.1454C11.7206 14.1454 14.9949 16.5026 16.852 17.8013ZM6.75971 9.99195L8.29876 14.9762L8.64067 11.8198C8.64067 11.8198 14.587 6.55394 17.9767 3.55244C18.0757 3.46424 18.0895 3.31664 18.007 3.21314C17.9254 3.10964 17.775 3.08534 17.6623 3.15554C13.7336 5.61884 6.75971 9.99195 6.75971 9.99195Z"></path>
+        </symbol>
+        <symbol viewBox="0 0 22 14" id="icon-twitter">
+            <path d="M22 2.12968C21.1903 2.49108 20.3215 2.73618 19.4086 2.8456C20.3407 2.28339 21.0542 1.39164 21.3923 0.332323C20.518 0.852967 19.5529 1.23102 18.5246 1.43596C17.7012 0.551132 16.5299 0 15.2307 0C12.7383 0 10.7174 2.03554 10.7174 4.54465C10.7174 4.90051 10.7573 5.24808 10.8343 5.58044C7.08401 5.39071 3.75852 3.58089 1.53281 0.830807C1.14375 1.50103 0.92242 2.28198 0.92242 3.11561C0.92242 4.69282 1.71978 6.08446 2.92956 6.89865C2.18994 6.87374 1.49431 6.6688 0.885322 6.32815V6.38492C0.885322 8.58662 2.44154 10.4241 4.50501 10.8424C4.12695 10.9448 3.72829 11.0016 3.31586 11.0016C3.02443 11.0016 2.7426 10.9725 2.46627 10.9171C3.04089 12.7242 4.70711 14.0383 6.68125 14.0743C5.1374 15.2929 3.19076 16.0171 1.07642 16.0171C0.712125 16.0171 0.353295 15.9949 0 15.9548C1.99751 17.2467 4.36895 18 6.91772 18C15.2198 18 19.7578 11.0736 19.7578 5.06671L19.7427 4.47821C20.6294 3.84119 21.3965 3.04084 22 2.12968Z"></path>
+        </symbol>
+        <symbol viewBox="0 0 20 24" id="icon-linked">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.737618 0.693855C1.22951 0.231435 1.87161 0 2.66406 0C3.45657 0 4.09179 0.231235 4.56904 0.693855C5.04634 1.15637 5.29 1.74035 5.29953 2.44618C5.30901 3.14239 5.06796 3.72411 4.57626 4.19129C4.08457 4.65872 3.43755 4.89226 2.63537 4.89226H2.60672C1.82375 4.89226 1.19344 4.65852 0.716146 4.19129C0.238699 3.72411 0 3.14219 0 2.44618C0 1.7403 0.245772 1.15637 0.737618 0.693855ZM20.5102 8.11852C19.5174 7.03605 18.2042 6.49471 16.5715 6.49471C15.9699 6.49471 15.4231 6.56862 14.9312 6.71653C14.4395 6.86434 14.0242 7.07172 13.6851 7.33878C13.3463 7.60584 13.0764 7.85376 12.876 8.08254C12.6854 8.29985 12.4991 8.55298 12.3173 8.83933V6.8235H7.6048L7.61925 7.51024C7.62893 7.96815 7.6337 9.37951 7.6337 11.7445C7.6337 14.1097 7.62416 17.1948 7.605 21H12.3173V13.0891C12.3173 12.6028 12.3695 12.2167 12.4748 11.9303C12.6755 11.4437 12.9783 11.0363 13.3844 10.7074C13.7904 10.3781 14.2939 10.2136 14.8957 10.2136C15.7166 10.2136 16.3208 10.4973 16.7076 11.0647C17.0943 11.6321 17.2876 12.4166 17.2876 13.418V20.9996H21.9999V12.8747C21.9996 10.786 21.5034 9.20064 20.5102 8.11852ZM0.271315 6.82357H4.99793V20.9999H0.271315V6.82357Z"></path>
+        </symbol>
+        <symbol viewBox="0 0 24 14" id="icon-youtube">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.66667 0C1.64162 0 0 1.59188 0 3.55556V11.8519C0 13.8155 1.64162 15.4074 3.66667 15.4074H18.3333C20.3584 15.4074 22 13.8155 22 11.8519V3.55556C22 1.59188 20.3584 0 18.3333 0H3.66667ZM9.7119 11.2764L14.8531 8.24688C15.1142 8.09304 15.2778 7.78813 15.2775 7.45569C15.2771 7.1235 15.1128 6.81904 14.8512 6.66592L9.71008 3.65588C9.46511 3.51238 9.17144 3.52343 8.93532 3.68511C8.69928 3.84679 8.55526 4.13557 8.55526 4.4468V10.4865C8.55526 10.7983 8.69968 11.0873 8.93619 11.2489C9.0618 11.3346 9.20362 11.3778 9.34574 11.3778C9.47127 11.3778 9.59696 11.3442 9.7119 11.2764Z"></path>
+        </symbol>
+        <symbol viewBox="0 0 22 32" id="icon-file" fill="none">
+            <rect x="1" y="5.20679" width="19.3793" height="25.7931" rx="3" stroke="#B9B9B9" stroke-width="2"></rect>
+            <path d="M10.332 3.35851V3C10.332 1.89543 11.2275 1 12.332 1L15.1021 1C16.2067 1 17.1021 1.89543 17.1021 3V13.4713C17.1021 14.2584 16.464 14.8966 15.6769 14.8966V14.8966C14.8897 14.8966 14.2516 14.2584 14.2516 13.4713V7.43076" stroke="#EF5B47" stroke-width="2"></path>
+            <rect x="4.98853" y="9.19531" width="5.70115" height="7.12644" fill="#C4C4C4"></rect>
+            <rect x="4.98853" y="18.4597" width="11.4023" height="1.42529" fill="#C4C4C4"></rect>
+            <rect x="4.98853" y="21.3103" width="11.4023" height="1.42529" fill="#C4C4C4"></rect>
+            <rect x="4.98853" y="24.1609" width="11.4023" height="1.42529" fill="#C4C4C4"></rect>
+        </symbol>
+        <symbol viewBox="0 0 16 20" id="icon-marker" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 8C16 10.0153 15.2548 11.8566 14.0249 13.2633L8 19.4282L1.97512 13.2633C0.74521 11.8566 0 10.0153 0 8C0 3.58173 3.58173 0 8 0C12.4183 0 16 3.58173 16 8ZM8 12C10.2091 12 12 10.2091 12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12Z" fill="#171782"></path>
+        </symbol>
+        <symbol viewBox="0 0 31 37" id="icon-clipboard">
+            <path xmlns="http://www.w3.org/2000/svg" d="M6.64286 28H6C3.79086 28 2 26.2091 2 24V6C2 3.79086 3.79086 2 6 2H18C20.2091 2 22 3.79086 22 6V6.21622" stroke-width="3"></path>
+            <rect xmlns="http://www.w3.org/2000/svg" x="10" y="9" width="19" height="26" rx="4" stroke-width="3"></rect>
+        </symbol>
+        <symbol viewBox="0 0 29 29" id="icon-search">
+            <path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" d="M18.0192 16.1041C20.2634 12.9487 19.9708 8.54326 17.1414 5.71392C13.9858 2.55827 8.86947 2.55827 5.71381 5.71392C2.55816 8.86957 2.55816 13.9859 5.71381 17.1415C8.71577 20.1435 13.4921 20.2897 16.6669 17.5802L22.2977 23.211L23.7119 21.7968L18.0192 16.1041ZM15.8553 7.00005C18.3006 9.44539 18.3006 13.4101 15.8553 15.8554C13.41 18.3008 9.44529 18.3008 6.99995 15.8554C4.55461 13.4101 4.55461 9.44539 6.99995 7.00005C9.44529 4.55471 13.41 4.55471 15.8553 7.00005Z"></path>
+        </symbol>
+        <symbol viewBox="0 0 6 10" id="icon-facebook">
+            <path xmlns="http://www.w3.org/2000/svg" d="M5.48328 0.00207468L4.11662 0C2.58124 0 1.589 0.96317 1.589 2.45393V3.58536H0.214893C0.0961536 3.58536 0 3.67644 0 3.78878V5.42809C0 5.54043 0.0962633 5.63141 0.214893 5.63141H1.589V9.7679C1.589 9.88025 1.68516 9.97122 1.80389 9.97122H3.59672C3.71545 9.97122 3.81161 9.88014 3.81161 9.7679V5.63141H5.41826C5.537 5.63141 5.63315 5.54043 5.63315 5.42809L5.63381 3.78878C5.63381 3.73484 5.61112 3.68318 5.57088 3.645C5.53064 3.60683 5.47582 3.58536 5.41881 3.58536H3.81161V2.62623C3.81161 2.16524 3.92772 1.93122 4.56242 1.93122L5.48306 1.9309C5.60169 1.9309 5.69784 1.83983 5.69784 1.72759V0.205393C5.69784 0.0932569 5.6018 0.00228215 5.48328 0.00207468Z"></path>
+        </symbol>
+    </svg>
+</div>    
+
+<a id="scrollUp" class="scrollUp scrollup-link scrollup-left" href="#top" style="position: fixed; z-index: 2147483647; display: block;">Вверх</a> <script type="text/javascript" id="">(function(d,b,a){(b[a]=b[a]||[]).push(function(){try{b.yaCounter23806177=new Ya.Metrika({id:23806177,clickmap:!0,trackLinks:!0,accurateTrackBounce:!0,webvisor:!0})}catch(a){}});var e=d.getElementsByTagName("script")[0],c=d.createElement("script");a=function(){e.parentNode.insertBefore(c,e)};c.type="text/javascript";c.async=!0;c.src="https://mc.yandex.ru/metrika/watch.js";"[object Opera]"==b.opera?d.addEventListener("DOMContentLoaded",a,!1):a()})(document,window,"yandex_metrika_callbacks");</script> <noscript><div><img src="https://mc.yandex.ru/watch/23806177" style="position:absolute; left:-9999px;" alt=""></div></noscript> </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
